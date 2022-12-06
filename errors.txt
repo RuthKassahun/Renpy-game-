@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 116: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    scene bg radiology
-    ^
+File "game/script.rpy", line 192: screen expects a non-empty block.
+    screen text_example():
+                          ^
+
+File "game/script.rpy", line 193: expected statement.
+    frame:
+         ^
 
 Ren'Py Version: Ren'Py 7.5.3.22090809
-Thu Nov 10 17:27:54 2022
+Mon Dec  5 17:03:43 2022

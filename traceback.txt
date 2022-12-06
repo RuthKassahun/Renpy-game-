@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 558, in script
+    jump incorrect_9
+ScriptError: could not find label 'incorrect_9'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 558, in script
+    jump incorrect_9
+  File "renpy/ast.py", line 1974, in execute
+    rv = renpy.game.script.lookup(target)
+  File "renpy/script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'incorrect_9'.
+
+Windows-10-10.0.19041 AMD64
+Ren'Py 7.5.3.22090809
+A Day in the life of an intern 7.0
+Mon Dec  5 09:37:39 2022
