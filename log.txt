@@ -1,35 +1,76 @@
-Mon Dec  5 17:03:43 2022
-Windows-10-10.0.19041
-Ren'Py 7.5.3.22090809
+Tue Dec 13 20:33:02 2022
+Windows-10-10.0.22621
+Ren'Py 8.0.3.22090809
  
 
-Bootstrap to the start of init.init took 0.08s
+Bootstrap to the start of init.init took 0.09s
 Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.30s
-Loading save slot metadata. took 0.02s
+Loader init took 0.08s
+Loading error handling took 0.06s
+Loading script took 0.88s
+Loading save slot metadata. took 0.11s
 Loading persistent took 0.00s
-
-File "game/script.rpy", line 192: screen expects a non-empty block.
-    screen text_example():
-                          ^
-
-File "game/script.rpy", line 193: expected statement.
-    frame:
-         ^
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Gonzalo\\Desktop\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+ - Init at game/script.rpy:5 took 0.35357 s.
+Running init code took 0.49s
+Loading analysis data took 0.05s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Gonzalo\\AppData\\Roaming/RenPy/backups\\the_question':
+Dump and make backups. took 0.13s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start took 0.35s
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.06s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.17s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'GeForce GTX 1050/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 391.25'
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.44.14 30.0.13044.14002'
 Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1739, 978) drawable=(1739, 978)
+Screen sizes: virtual=(1280, 720) physical=(1727, 971) drawable=(1727, 971)
 Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 2780, in script
+    call screen happy_supervisor
+  File "C:\Users\Gonzalo\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 2232, in execute
+    self.call("execute")
+  File "C:\Users\Gonzalo\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 2220, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Gonzalo\Desktop\renpy-8.0.3-sdk\renpy\statements.py", line 281, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\Gonzalo\Desktop\renpy-8.0.3-sdk\renpy\exports.py", line 3167, in call_screen
+    show_screen(_screen_name, _transient=True, *args, **kwargs)
+  File "C:\Users\Gonzalo\Desktop\renpy-8.0.3-sdk\renpy\display\screen.py", line 1185, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen happy_supervisor is not known.
+
+
+While running game code:
+  File "game/script.rpy", line 2780, in script
+    call screen happy_supervisor
+  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+Exception: Screen happy_supervisor is not known.
+

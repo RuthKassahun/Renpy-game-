@@ -29,22 +29,18 @@ define config.version = "7.0"
 ## Text that is placed on the game's about screen. To insert a blank line
 ## between paragraphs, write \n\n.
 
-define gui.about = _("""Character Art: Deji.
-Original Character Art: derik.
+define gui.about = _("""Character Art: Zarin
 
-Background Art: Mugenjohncel.
-Original Background Art: DaFool
+Background Art: freepik
 
-Music By: Alessio
-
-Written By: mikey""")
+Written By: Ruth, Gonzalo, Zarin""")
 
 
 ## A short name for the game used for executables and directories in the built
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "the_question"
+define build.name = "A Day in the life of an intern"
 
 ## Change the version used by the build system.
 define build.version = "7.0"
@@ -213,4 +209,4 @@ init python:
 ## The username and project name associated with an itch.io project, separated
 ## by a slash.
 
-define build.itch_project = "renpytom/the-question"
+define build.itch_project = "renpytom/a-day-in-the-life-of-an-intern"
